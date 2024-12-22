@@ -24,7 +24,7 @@ where
 #[inline(always)]
 pub fn f32<T: Sized>(i: T) -> f32
 where
-  if32: From<T>
+  f32: From<T>
 {
     i.into()
 }
