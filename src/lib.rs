@@ -73,7 +73,7 @@ pub fn i8<T: Sized>(i: T) -> i8
 where
     i8: TryFrom<T>,
 {
-    i8::try_from(i).expect("failed to cast Number")
+    i8::try_from(i).unwrap_or_else(|e| panic!( "failed to cast Number {}",e.to_string()))
 }
 #[inline(always)]
 pub fn u64<T: Sized>(i: T) -> u64
