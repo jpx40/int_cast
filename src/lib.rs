@@ -1,3 +1,5 @@
+use std::ops::Shl;
+
 #[inline(always)]
 pub fn i32<T: Sized>(i: T) -> i32
 where
